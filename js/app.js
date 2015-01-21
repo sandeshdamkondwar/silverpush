@@ -3,11 +3,14 @@
  *
  * Description
  */
-var app = angular.module('SPWebApp', ['ngRoute', 'ngAnimate']);
 
-app.config(['$routeProvider', function($routeProvider) {
-    $routeProvider
-        .when('/', {
+(function () {
+    angular.module('SPWebApp', ['ngRoute', 'ngAnimate'])
+        .config(['$routeProvider', routeProvider])
+        .config(['$locationProvider', locationProvider]);
+
+    function routeProvider () {
+        this.when('/', {
             templateUrl: 'views/home.html',
         })
         .when('/home', {
@@ -46,17 +49,16 @@ app.config(['$routeProvider', function($routeProvider) {
         .otherwise({
             redirectTo: '/'
         });
-}]);
-
-//Setting HTML5 Location Mode
-app.config(['$locationProvider',
-    function($locationProvider) {
-        $locationProvider.hashPrefix("!");
     }
-]);
 
-$(document).on('click', '.navbar-collapse.in', function(e) {
-    if ($(e.target).is('a')) {
-        $(this).collapse('hide');
+    function locationProvider () {
+        this.html5Mode(true);
+        this.hashPrefix("!");
     }
-});
+
+    $(document).on('click', '.navbar-collapse.in', function(e) {
+        if ($(e.target).is('a')) {
+            $(this).collapse('hide');
+        }
+    });
+})();
