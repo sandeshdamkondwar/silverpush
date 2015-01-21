@@ -8,40 +8,40 @@ var app = angular.module('SPWebApp', ['ngRoute', 'ngAnimate']);
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'views/view_home.html',
+            templateUrl: 'views/home.html',
         })
         .when('/home', {
-            templateUrl: 'views/view_home.html',
+            templateUrl: 'views/home.html',
         })
         .when('/team', {
-            templateUrl: 'views/view_team.html',
+            templateUrl: 'views/team.html',
         })
         .when('/tech', {
-            templateUrl: 'views/view_tech.html',
+            templateUrl: 'views/tech.html',
         })
         .when('/company', {
-            templateUrl: 'views/view_company.html',
+            templateUrl: 'views/company.html',
         })
         .when('/contactus', {
-            templateUrl: 'views/view_contactus.html',
+            templateUrl: 'views/contactus.html',
         })
         .when('/investors', {
-            templateUrl: 'views/view_investors.html',
+            templateUrl: 'views/investors.html',
         })
         .when('/career', {
-            templateUrl: 'views/view_career.html',
+            templateUrl: 'views/career.html',
         })
         .when('/analytics', {
-            templateUrl: 'views/view_analytics.html',
+            templateUrl: 'views/analytics.html',
         })
         .when('/targeting', {
-            templateUrl: 'views/view_targeting.html',
+            templateUrl: 'views/targeting.html',
         })
         .when('/measurement', {
-            templateUrl: 'views/view_measurement.html',
+            templateUrl: 'views/measurement.html',
         })
          .when('/beacon', {
-            templateUrl: 'views/view_beacon.html',
+            templateUrl: 'views/beacon.html',
         })
         .otherwise({
             redirectTo: '/'
@@ -54,3 +54,9 @@ app.config(['$locationProvider',
         $locationProvider.hashPrefix("!");
     }
 ]);
+
+$(document).on('click', '.navbar-collapse.in', function(e) {
+    if ($(e.target).is('a')) {
+        $(this).collapse('hide');
+    }
+});
