@@ -7,44 +7,53 @@
 (function () {
     angular.module('SPWebApp', ['ngRoute', 'ngAnimate'])
         .config(['$routeProvider', routeProvider])
-        .config(['$locationProvider', locationProvider]);
+        .config(['$locationProvider', locationProvider])
+        .controller('TeamController', ['$scope','$http',
+            function($scope, $http) {
+                $http.get("app/components/team/teamData.json").success(function(data) {
+                    $scope.team = data;
+                });
+            }
+        ]);
 
     function routeProvider ($routeProvider) {
+        var componentsDir = "app/components/";
         $routeProvider.when('/', {
-            templateUrl: 'app/components/home/homeView.html'
+            templateUrl: componentsDir + 'home/homeView.html'
         })
         .when('/home', {
-            templateUrl: 'app/components/home/homeView.html'
+            templateUrl: componentsDir + 'home/homeView.html'
         })
         .when('/team', {
-            templateUrl: 'app/components/team/teamView.html'
+            templateUrl: componentsDir + 'team/teamView.html',
+            controller: "TeamController"
         })
         .when('/tech', {
-            templateUrl: 'app/components/tech/techView.html',
+            templateUrl: componentsDir + 'tech/techView.html'
         })
         .when('/company', {
-            templateUrl: 'app/components/company/companyView.html',
+            templateUrl: componentsDir + 'company/companyView.html'
         })
         .when('/contactus', {
-            templateUrl: 'app/components/contactus/contactusView.html',
+            templateUrl: componentsDir + 'contactus/contactusView.html'
         })
         .when('/investors', {
-            templateUrl: 'app/components/investors/investorsView.html',
+            templateUrl: componentsDir + 'investors/investorsView.html'
         })
         .when('/career', {
-            templateUrl: 'app/components/career/careerView.html',
+            templateUrl: componentsDir + 'career/careerView.html'
         })
         .when('/analytics', {
-            templateUrl: 'app/components/analytics/analyticsView.html',
+            templateUrl: componentsDir + 'analytics/analyticsView.html'
         })
         .when('/targeting', {
-            templateUrl: 'app/components/targeting/targetingView.html',
+            templateUrl: componentsDir + 'targeting/targetingView.html'
         })
         .when('/measurement', {
-            templateUrl: 'app/components/measurement/measurementView.html',
+            templateUrl: componentsDir + 'measurement/measurementView.html'
         })
          .when('/beacon', {
-            templateUrl: 'app/components/beacon/beaconView.html',
+            templateUrl: componentsDir + 'beacon/beaconView.html'
         })
         .otherwise({
             redirectTo: '/'
