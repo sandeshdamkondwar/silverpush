@@ -115,7 +115,9 @@
     <script src="app/libs/wow.min.js"></script>
 
     <!-- App.js -->
-    <script src="app/app.js"></script>
+    <!-- Load custom scripts via RequireJS -->
+    <script src="app/libs/require.min.js" data-main="app/main"></script>
+
     <script>
     new WOW().init();
     </script>
@@ -141,5 +143,4 @@
     </script>
 
 </body>
-
 </html>

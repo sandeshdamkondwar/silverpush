@@ -4,69 +4,45 @@
  * Description
  */
 
-(function () {
-    angular.module('SPWebApp', ['ngRoute', 'ngAnimate'])
-        .config(['$routeProvider', routeProvider])
-        .config(['$locationProvider', locationProvider])
-        .controller('TeamController', ['$scope','$http',
-            function($scope, $http) {
-                $http.get("app/components/team/teamData.json").success(function(data) {
-                    $scope.team = data;
+ define(['services/routeResolver'], function () {
+    "use strict";
+
+    var app = angular.module('SPWebApp', ['ngRoute', 'ngAnimate', 'routeResolverServices']);
+
+    app.config(['$routeProvider', 'routeResolverProvider', '$controllerProvider', '$provide', '$locationProvider',
+        function ($routeProvider, routeResolverProvider, $controllerProvider, $provide, $locationProvider) {
+            app.register = {
+                controller: $controllerProvider.register,
+                factory: $provide.factory,
+                service: $provide.service
+            };
+
+            //Define routes - controllers will be loaded dynamically
+            var route = routeResolverProvider.route;
+
+            $routeProvider.when('/', route.resolve("home", "", 'vm'))
+                .when('/home', route.resolve("home", "", 'vm'))
+                .when('/team', route.resolve("team", "", 'vm'))
+                .when('/tech', route.resolve("tech", "", 'vm'))
+                .when('/company', route.resolve("company", "", 'vm'))
+                .when('/contactus', route.resolve("contactus", "", 'vm'))
+                .when('/investors', route.resolve("investors", "", 'vm'))
+                .when('/career', route.resolve("career", "", 'vm'))
+                .when('/analytics', route.resolve("analytics", "", 'vm'))
+                .when('/targeting', route.resolve("targeting", "", 'vm'))
+                .when('/measurement', route.resolve("measurement", "", 'vm'))
+                .when('/beacon', route.resolve("beacon", "", 'vm'))
+                .otherwise({
+                    redirectTo: '/'
                 });
-            }
-        ]);
 
-    function routeProvider ($routeProvider) {
-        var componentsDir = "app/components/";
-        $routeProvider.when('/', {
-            templateUrl: componentsDir + 'home/homeView.html'
-        })
-        .when('/home', {
-            templateUrl: componentsDir + 'home/homeView.html'
-        })
-        .when('/team', {
-            templateUrl: componentsDir + 'team/teamView.html',
-            controller: "TeamController"
-        })
-        .when('/tech', {
-            templateUrl: componentsDir + 'tech/techView.html'
-        })
-        .when('/company', {
-            templateUrl: componentsDir + 'company/companyView.html'
-        })
-        .when('/contactus', {
-            templateUrl: componentsDir + 'contactus/contactusView.html'
-        })
-        .when('/investors', {
-            templateUrl: componentsDir + 'investors/investorsView.html'
-        })
-        .when('/career', {
-            templateUrl: componentsDir + 'career/careerView.html'
-        })
-        .when('/analytics', {
-            templateUrl: componentsDir + 'analytics/analyticsView.html'
-        })
-        .when('/targeting', {
-            templateUrl: componentsDir + 'targeting/targetingView.html'
-        })
-        .when('/measurement', {
-            templateUrl: componentsDir + 'measurement/measurementView.html'
-        })
-         .when('/beacon', {
-            templateUrl: componentsDir + 'beacon/beaconView.html'
-        })
-        .otherwise({
-            redirectTo: '/'
-        });
-    }
-
-    function locationProvider ($locationProvider) {
-        $locationProvider.hashPrefix("!");
-    }
-
-    $(document).on('click', '.navbar-collapse.in', function(e) {
-        if ($(e.target).is('a')) {
-            $(this).collapse('hide');
+            $locationProvider.hashPrefix('!');
         }
-    });
-})();
+    ]);
+
+    app.run(['$rootScope', '$location', function ($rootScope, $location) {
+        console.log($rootScope, $location);
+    }]);
+
+    return app;
+});
