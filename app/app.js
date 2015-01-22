@@ -19,6 +19,10 @@ function routeProvider ($routeProvider) {
         templateUrl: 'app/views/teamView.html',
         controller: "TeamController"
     })
+    .when('/team/details/:id', {
+        templateUrl: 'app/views/detailsView.html',
+        controller: "DetailsController"
+    })
     .when('/tech', {
         templateUrl: 'app/views/techView.html'
     })

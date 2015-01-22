@@ -17,7 +17,7 @@
                                 <p class="desc">"..{{ person.desc }}"</p>
                             </div>
                             <div class="bottom-box2">
-                                <p class="title">{{ person.name | uppercase }}</p>
+                                <a href="#!team/details/{{ team.indexOf(person) }}" class="title">{{ person.name | uppercase }}</a>
                                 <p class="pos">{{ person.position }}</p>
                                 <p class="links">
                                     <a href="{{ person.linkedin }}" target="_blank" class="btn btn-xs btn-info">
@@ -48,7 +48,7 @@
                                 <p class="desc">"..{{ person.desc }}"</p>
                             </div>
                             <div class="bottom-box2">
-                                <p class="title">{{ person.name | uppercase }}</p>
+                                <a href="#!team/details/{{ team.indexOf(person) }}" class="title">{{ person.name | uppercase }}</a>
                                 <p class="pos">{{ person.position }}</p>
                                 <p class="links">
                                     <a href="{{ person.linkedin }}" target="_blank" class="btn btn-xs btn-info">

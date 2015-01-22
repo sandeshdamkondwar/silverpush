@@ -1,0 +1,24 @@
+<section class="module content no-bottom-pad bg-team">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="txt-white">{{ team[id].name }}</h1>
+            <div class="panel panel-default team-panel wow animated fadeInLeft col-md-4 col-md-offset-4">
+                <div class="panel-body team_box_img details" id="{{ team[id].shortname }}"
+                    style="{{ 'background-image: url(' + profileImagesPath + team[id].shortname + '.jpg);' }}">
+                </div>
+	            <div class="detail-box1">
+	                <p class="desc">"..{{ team[id].desc }}"</p>
+	            </div>
+	            <div class="detail-box2">
+	                <a class="title">{{ team[id].name | uppercase }}</a>
+	                <p class="pos">{{ team[id].position }}</p>
+	                <p class="links">
+	                    <a href="{{ team[id].linkedin }}" target="_blank" class="btn btn-xs btn-info">
+	                        <span class="fa fa-linkedin"></span>
+	                    </a>
+	                </p>
+	            </div>
+            </div>
+        </div>
+    </div>
+</section>
