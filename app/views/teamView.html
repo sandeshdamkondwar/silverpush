@@ -9,14 +9,14 @@
         <div class="row">
             <h1 class="txt-white">Founders</h1>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="person in team|filter:{category: 'founders'}">
-                <div class="panel panel-default team-panel animated fadeInLeft">
+                <div class="panel panel-default team-panel wow animated fadeInLeft">
                     <div class="panel-body team_box_img" id="{{ person.shortname }}">
                         <div class="hover-div">
                             <div class="bottom-box1">
                                 <p class="desc">"..{{ person.desc }}"</p>
                             </div>
                             <div class="bottom-box2">
-                                <p class="title">{{ person.title }}</p>
+                                <p class="title">{{ person.name | uppercase }}</p>
                                 <p class="pos">{{ person.position }}</p>
                                 <p class="links">
                                     <a href="{{ person.linkedin }}" target="_blank" class="btn btn-xs btn-info">
@@ -30,9 +30,16 @@
             </div>
         </div>
         <div class="row">
-            <h1 class="txt-white">Team</h1>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="person in team|filter:{category: 'team'}">
-                <div class="panel panel-default team-panel animated fadeInLeft">
+            <div class="col-md-6">
+                <h1 class="txt-white">Team</h1>
+            </div>
+            <div class="col-md-6">
+                <input class="search" type="text" placeholder="Search" ng-model="query" value="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" ng-repeat="person in team | filter: {category: 'team', name: query}| orderBy: empOrderBy">
+                <div class="panel panel-default team-panel wow fadeInUp animated">
                     <div class="panel-body team_box_img" id="{{ person.shortname }}">
                         <div class="hover-div">
                             <div class="bottom-box1">

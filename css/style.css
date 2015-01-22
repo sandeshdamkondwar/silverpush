@@ -25,13 +25,13 @@ body {
 img.img-gs {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     /* Firefox 3.5+ */
-    
+
     filter: gray;
     /* IE6-9 */
-    
+
     -webkit-filter: grayscale(100%);
     /* Chrome 19+ & Safari 6+ */
-    
+
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -226,23 +226,33 @@ section.module.parallax-measurement {
     width: 100%;
     height: 400px;
     /* your iframe height */
-    
+
     top: 400px;
     /* your iframe height */
-    
+
     margin-top: -400px;
     /* your iframe height */
 }
 /* Title Styles */
 
-h1 {
+h1, .search {
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-size: 70px;
-    padding: 0 0 30px 0;
+    padding: 20px 0 20px 0;
     text-align: center;
-    text-transform: uppercase;
     text-rendering: optimizeLegibility;
+    margin: 0;
 }
+
+h1 {
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.search {
+    font-size: 57px;
+    width: 100%;
+}
+
 h1.elegantshadow {
     color: #131313;
     letter-spacing: .15em;
@@ -429,22 +439,22 @@ h1.retroshadow {
 
 img.bg {
     /* Set rules to fill background */
-    
+
     min-height: 100%;
     min-width: 1024px;
     /* Set up proportionate scaling */
-    
+
     width: 100%;
     height: auto;
     /* Set up positioning */
-    
+
     position: fixed;
     top: 0;
     left: 0;
 }
 @media screen and (max-width: 1024px) {
     /* Specific to this particular image */
-    
+
     img.bg {
         left: 50%;
         margin-left: -512px;
@@ -478,19 +488,19 @@ img.bg {
 .view-slide-in.ng-enter.ng-enter-active {
     /*top: 0;
     left: 0;*/
-    
+
     opacity: 1;
 }
 .view-slide-in.ng-leave.ng-leave-active {
     /*top: 5px;
     left: 5px;*/
-    
+
     opacity: 1;
 }
 .view-slide-in.ng-leave {
     /* top: 0;
     left: 0;*/
-    
+
     opacity: 0;
 }
 /*  ng-repeat Animation  */
