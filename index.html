@@ -116,8 +116,15 @@
 
     <!-- App.js -->
     <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
     <script>
     new WOW().init();
+
+    $(document).on('click', '.navbar-collapse.in', function(e) {
+        if ($(e.target).is('a')) {
+            $(this).collapse('hide');
+        }
+    });
     </script>
 
     <!-- In-Page Script -->
