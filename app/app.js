@@ -8,52 +8,45 @@
     angular.module('SPWebApp', ['ngRoute', 'ngAnimate'])
         .config(['$routeProvider', routeProvider])
         .config(['$locationProvider', locationProvider])
-        .controller('TeamController', ['$scope','$http',
-            function($scope, $http) {
-                $http.get("app/components/team/teamData.json").success(function(data) {
-                    $scope.team = data;
-                });
-            }
-        ]);
+        .controller('TeamController', ['$scope','$http', TeamController]);
 
     function routeProvider ($routeProvider) {
-        var componentsDir = "app/components/";
         $routeProvider.when('/', {
-            templateUrl: componentsDir + 'home/homeView.html'
+            templateUrl: 'app/views/homeView.html'
         })
         .when('/home', {
-            templateUrl: componentsDir + 'home/homeView.html'
+            templateUrl: 'app/views/homeView.html'
         })
         .when('/team', {
-            templateUrl: componentsDir + 'team/teamView.html',
+            templateUrl: 'app/views/teamView.html',
             controller: "TeamController"
         })
         .when('/tech', {
-            templateUrl: componentsDir + 'tech/techView.html'
+            templateUrl: 'app/views/techView.html'
         })
         .when('/company', {
-            templateUrl: componentsDir + 'company/companyView.html'
+            templateUrl: 'app/views/companyView.html'
         })
         .when('/contactus', {
-            templateUrl: componentsDir + 'contactus/contactusView.html'
+            templateUrl: 'app/views/contactusView.html'
         })
         .when('/investors', {
-            templateUrl: componentsDir + 'investors/investorsView.html'
+            templateUrl: 'app/views/investorsView.html'
         })
         .when('/career', {
-            templateUrl: componentsDir + 'career/careerView.html'
+            templateUrl: 'app/views/careerView.html'
         })
         .when('/analytics', {
-            templateUrl: componentsDir + 'analytics/analyticsView.html'
+            templateUrl: 'app/views/analyticsView.html'
         })
         .when('/targeting', {
-            templateUrl: componentsDir + 'targeting/targetingView.html'
+            templateUrl: 'app/views/targetingView.html'
         })
         .when('/measurement', {
-            templateUrl: componentsDir + 'measurement/measurementView.html'
+            templateUrl: 'app/views/measurementView.html'
         })
          .when('/beacon', {
-            templateUrl: componentsDir + 'beacon/beaconView.html'
+            templateUrl: 'app/views/beaconView.html'
         })
         .otherwise({
             redirectTo: '/'
@@ -62,6 +55,12 @@
 
     function locationProvider ($locationProvider) {
         $locationProvider.hashPrefix("!");
+    }
+
+    function TeamController ($scope, $http) {
+        $http.get("app/data/teamData.json").success(function(data) {
+            $scope.team = data;
+        });
     }
 
     $(document).on('click', '.navbar-collapse.in', function(e) {
