@@ -840,6 +840,11 @@ section.module .row .page-title {
     border-bottom-width: 2px;
     box-shadow: none;
 }
+.box.max-400 {
+    max-width: 400px;
+    margin-bottom: 2em;
+    text-align: center;
+}
 .team_box_img.long {
     height: 400px;
 }
@@ -1275,12 +1280,19 @@ legend {
         font-size: 1.2em;
     }
 }
-/* Portrait tablet to landscape and desktop */
 
-@media (min-width: 768px) and (max-width: 979px) {}
+
 /* Landscape phone to portrait tablet */
 
 @media (max-width: 767px) {
+    .box.max-400 {
+        margin: 0 auto;
+    }
+
+    .navbar-nav {
+        margin: 0 -15px;
+    }
+
     .navbar-nav>li {
         border-bottom: 0;
     }
