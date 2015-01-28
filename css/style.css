@@ -20,6 +20,13 @@ body {
     padding-top: 50px;
 }
 
+a:not([href]):hover,
+a:not([href]):focus {
+    color: #337AB7;
+    text-decoration: none;
+}
+
+
 /*------------------------------------------------------------------------------*/
 /* Image GreyScale Change Effect */
 
