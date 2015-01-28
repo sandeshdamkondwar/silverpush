@@ -225,6 +225,14 @@ section.module.parallax-measurement {
         font-size: 160px;
     }
 }
+
+
+/* Company */
+
+.mobile.img-responsive {
+    margin: 0 auto;
+}
+
 /* Map Overlay */
 
 .overlay {
