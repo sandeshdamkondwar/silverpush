@@ -1125,10 +1125,30 @@ section.module .row .page-title {
 .nav,
 .dropdown-menu {
     font-size: 1em;
+    border-radius: 0;
+}
+
+nav ul > li {
+    cursor: pointer;
 }
 
 .dropdown-menu > li > a {
     color: #000;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .open > a {
+    background-image: none;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav .open .dropdown-menu {
+        background-color: #555;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+        background-color: #909090;
+    }
 }
 
 /* Hamburg  */
