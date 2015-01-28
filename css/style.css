@@ -330,7 +330,7 @@ h1.retroshadow {
 .info-box p:nth-child(2) {
     font-size: 2em;
 }
-#social-icons, #social-icons li, #social-icons a {
+#social-icons a {
     font-size: 1.2em;
     color: rgba(255, 255, 255, 0.95);
 }
