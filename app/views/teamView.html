@@ -6,8 +6,8 @@
 
 <section class="module content no-bottom-pad bg-team">
     <div class="container-fluid">
-        <div class="row">
-            <h1 class="txt-white">Founders</h1>
+        <div class="row team">
+            <h1>Founders</h1>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="person in team|filter:{category: 'founders'}">
                 <div class="panel panel-default team-panel wow animated fadeInLeft">
                     <div class="panel-body team_box_img" id="{{ person.shortname }}"
@@ -30,15 +30,15 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row team">
             <div class="col-md-6">
-                <h1 class="txt-white">Team</h1>
+                <h1>Team</h1>
             </div>
             <div class="col-md-6">
                 <input class="search" type="text" placeholder="Search" ng-model="query" value="">
             </div>
         </div>
-        <div class="row">
+        <div class="row team">
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" ng-repeat="person in team | filter: {category: 'team', name: query}| orderBy: empOrderBy">
                 <div class="panel panel-default team-panel wow fadeInUp animated"
                         style="{{ 'background-image: url(' + profileImagesPath + person.shortname + '.jpg);' }}">

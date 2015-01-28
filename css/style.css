@@ -14,10 +14,16 @@ html, body {
 body {
     background: white;
     letter-spacing: 1px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Economica', sans-serif;
     color: rgb(65, 65, 65);
-    font-weight: 300;
+    font-size: medium;
+    font-weight: 400;
     padding-top: 50px;
+}
+
+.ubuntu {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
 }
 /*------------------------------------------------------------------------------*/
 /* Image GreyScale Change Effect */
@@ -64,8 +70,8 @@ img.img-gs:hover {
     text-transform: uppercase;
 }
 #tech-div>.container>.col-md-4 p {
-    text-align: justify;
-    font-size: 1.2em;
+    text-align: center;
+    font-size: 1.4em;
 }
 #home-data-div h1 {
     text-align: left;
@@ -157,8 +163,9 @@ section.module.parallax.narrow {
 section.module.parallax h1 {
     color: rgba(255, 255, 255, 0.8);
     font-size: 48px;
+    font-family: "Ubuntu";
     line-height: 330px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -207,7 +214,7 @@ section.module.parallax-measurement {
         font-size: 42px;
     }
     section.module p {
-        font-size: 20px;
+        font-size: 22px;
     }
     section.module.parallax h1 {
         font-size: 96px;
@@ -236,7 +243,7 @@ section.module.parallax-measurement {
 /* Title Styles */
 
 h1, .search {
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     padding: 20px 0 20px 0;
     text-align: center;
     text-rendering: optimizeLegibility;
@@ -251,6 +258,8 @@ h1 {
 .search {
     font-size: 57px;
     width: 100%;
+    background: #f5f5f5;
+    border: 1px solid rgba(169, 169, 169, 0.3);
 }
 
 h1.elegantshadow {
@@ -272,6 +281,7 @@ h1.retroshadow {
     color: #2c2c2c;
     letter-spacing: .05em;
     text-shadow: 3px 3px 0px #d5d5d5, 2px 3px 0px rgba(0, 0, 0, 0.2);
+    padding-bottom: 1em;
 }
 /*------------------------------------------------------------------------------*/
 /* Page Style */
@@ -303,25 +313,18 @@ h1.retroshadow {
     color: white;
 }
 .info-box >div {
-    background-color: rgba(255, 255, 255, 0.78);
-    color: rgb(66, 66, 66);
-    padding: 1em;
+    background-color: #5DB0C6;
+    color: #FFF;
+    padding: 2em;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-.info-box >div:hover {
-    background-color: rgba(0, 190, 162, 0.78);
-    color: white;
-    cursor: default;
-}
-.info-box >div.clr:hover {
-    color: rgba(58, 58, 58, 0.96);
-    cursor: default;
-}
 .info-box p:nth-child(1) {
     font-size: 6em;
+    line-height: 1em;
+    margin-bottom: .25em;
     font-weight: 700;
 }
 .info-box p:nth-child(2) {
@@ -329,13 +332,13 @@ h1.retroshadow {
 }
 #social-icons, #social-icons li, #social-icons a {
     font-size: 1.2em;
-    color: rgba(160, 160, 160, 0.95);
+    color: rgba(255, 255, 255, 0.95);
 }
-#social-icons li:hover, #social-icons a:hover {
+#social-icons a:hover {
     color: white;
 }
 .bg-team {
-    background-color: rgba(6, 11, 63, 0.85);
+    background-color: #f5f5f5;
 }
 .bg-contact {
     background: #E4BD81;
@@ -350,7 +353,7 @@ h1.retroshadow {
     color: black;
 }
 .bg-black {
-    background-color: black;
+    background-color: #5DB0C6;
 }
 .bg-white {
     background-color: rgba(255, 255, 255, 0.55);
@@ -363,6 +366,9 @@ h1.retroshadow {
     padding-top: 70px;
     padding-bottom: 70px;
     color: black;
+    border-color: rgba(213, 213, 213, 0.2);
+    border-style: solid;
+    border-width: 2px 0;
 }
 .bg-blue {
     background: #5CCCF5;
@@ -373,6 +379,9 @@ h1.retroshadow {
     background: rgb(14, 121, 93);
     padding-top: 70px;
     padding-bottom: 70px;
+}
+.black-shadow {
+    border-bottom: 3px solid #404040;
 }
 .txt-black {
     color: black;
@@ -465,7 +474,7 @@ img.bg {
 /* Brand Img Style */
 
 .brand-img {
-    height: 2.5em;
+    height: 50px;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -702,17 +711,18 @@ ul#ticker li {
 .box-data a {
     text-decoration: none;
 }
-.box-data >.row>div {
+.box-data .open-position {
     text-align: center;
     background-color: rgba(249, 249, 249, 0.21);
     color: rgb(98, 98, 98);
     padding: 2em;
+    margin: 20px 0;
     height: 16em;
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
@@ -720,7 +730,7 @@ ul#ticker li {
     overflow: hidden;
     text-align: center;
 }
-.box-data >.row>div:before {
+.box-data .open-position:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -738,7 +748,7 @@ ul#ticker li {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
-.box-data >.row>div:hover:before, .box-data >.row>div:focus:before, .box-data >.row>div:active:before {
+.box-data .open-position:hover:before, .box-data .open-position:focus:before, .box-data .open-position:active:before {
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
@@ -748,40 +758,40 @@ ul#ticker li {
     font-size: 1.8em;
     margin-top: 0.1em;
 }
-.page-data >.row.data_bar {
+.page-data > .row.data_bar {
     margin-bottom: 10px;
 }
 section.module .row .page-title {
     font-size: 3.5em;
 }
-.data_bar>span:nth-child(1) {
+.data_bar span:nth-child(1) {
     background-color: rgb(115, 115, 115);
-    padding: 0 0.8%;
+    padding: .1em .2em;
     opacity: 0.9;
     color: white;
     text-align: right;
 }
-.data_bar>span:nth-child(1):hover {
+.data_bar span:nth-child(1):hover {
     opacity: 1;
 }
-.data_bar>span:nth-child(1).danger {
+.data_bar span:nth-child(1).danger {
     background-color: rgb(158, 50, 41);
 }
-.data_bar>span:nth-child(1).primary {
+.data_bar span:nth-child(1).primary {
     background-color: rgb(8, 56, 121);
 }
-.data_bar>span:nth-child(1).info {
+.data_bar span:nth-child(1).info {
     background-color: rgb(26, 145, 197);
 }
-.data_bar>span:nth-child(1).warning {
+.data_bar span:nth-child(1).warning {
     background-color: rgb(189, 122, 17);
 }
-.data_bar>span:nth-child(1).success {
+.data_bar span:nth-child(1).success {
     background-color: rgb(17, 189, 117);
 }
-.data_bar>span:nth-child(2) {
-    background-color: rgba(208, 208, 208, 0.14);
-    padding: 0 2% 0 0.8%;
+.data_bar span:nth-child(2) {
+    background-color: rgba(208, 208, 208, 0.3);
+    padding: .1em .2em;
     white-space: pre-wrap;
     line-height: 160%;
     color: rgb(98, 97, 97);
@@ -793,7 +803,10 @@ section.module .row .page-title {
     font-size: 3em;
 }
 /* Team Box  */
-
+.team {
+    max-width: 1800px;
+    margin: 0 auto;
+}
 .team_box_img {
     background-size: cover;
     background-repeat: no-repeat;
@@ -801,7 +814,6 @@ section.module .row .page-title {
     height: 300px;
     padding: 0;
     text-align: center;
-    border: 5px solid rgb(74, 160, 186);
 }
 .team_box_img.details {
     max-width: 300px;
@@ -809,8 +821,11 @@ section.module .row .page-title {
     border: 0;
 }
 .panel.panel-default.team-panel {
-    border: 12px solid white;
     border-radius: 0;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    border: 5px solid #FFF;
+    overflow: hidden;
+    background-size: cover;
 }
 .team_box_img.long {
     height: 400px;
@@ -860,12 +875,16 @@ section.module .row .page-title {
     padding: 5px 15px;
 }
 .bottom-box2 {
-    min-height: 60px;
+    min-height: 70px;
     min-width: 100%;
     background-color: rgba(255, 255, 255, 1);
-    bottom: 0;
+    bottom: -70px;
     position: absolute;
     color: rgb(61, 61, 61);
+    transition: all 0.3s ease-out;
+}
+.hover-div:hover .bottom-box2 {
+    bottom: 0;
 }
 .detail-box2 > a.title,
 .bottom-box2 > a.title {
@@ -882,7 +901,7 @@ section.module .row .page-title {
 }
 .bottom-box2 > a.title {
     position: absolute;
-    bottom: 30%;
+    bottom: 25px;
     left: 5%;
 }
 .detail-box2 > p.pos,
@@ -893,9 +912,9 @@ section.module .row .page-title {
 .bottom-box2 > p.pos {
     position: absolute;
     margin-bottom: 0;
-    bottom: 5%;
+    bottom: 5px;
     left: 5%;
-    color: rgba(26, 26, 26, 0.47);
+    color: rgba(0, 0, 0, 1);
 }
 .detail-box2 > p.links,
 .bottom-box2 > p.links {
@@ -910,9 +929,28 @@ section.module .row .page-title {
 .links>a {
     font-size: 2.5em;
     padding: 0 0.1em;
+    border: 0;
+    border-radius: 0;
+    width: 1.4em;
 }
-/* Panel-Box */
 
+/* Navigation */
+.nav,
+.dropdown-menu {
+    font-size: 1em;
+}
+
+.dropdown-menu > li > a {
+    color: #000;
+}
+
+/* list group item */
+.list-group-item {
+    font-size: 1.2em;
+}
+
+
+/* Panel-Box */
 .panel-box .panel {
     border-radius: 0;
     border: 0;
@@ -920,7 +958,7 @@ section.module .row .page-title {
     vertical-align: middle;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
@@ -950,6 +988,8 @@ section.module .row .page-title {
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
+
+
 /*------------------------------------------------------------------------------*/
 /* Hacked Bootstrap Style */
 
@@ -964,19 +1004,19 @@ legend {
     height: 60px;
 }
 .navbar-brand {
-    padding: 7px 15px;
+    padding: 5px;
 }
 .navbar-nav>li {
     background-color: #212121;
     padding-top: 4px;
-    border-bottom: 6px solid rgba(47, 172, 202, 1);
+    border-bottom: 6px solid #5DB0C6;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 .navbar-nav>li:hover {
-    padding-bottom: 6px;
+    padding-bottom: 5px;
 }
 /*------------------------------------------------------------------------------*/
 /* Media Queries */
@@ -984,7 +1024,7 @@ legend {
 
 @media (min-width: 1200px) {
     .bottom-box2 > p.pos {
-        font-size: 0.8em;
+        font-size: 1.2em;
     }
     .bottom-box2 > p.links {
         font-size: 1.2em;
