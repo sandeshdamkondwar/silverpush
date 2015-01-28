@@ -35,7 +35,12 @@
                 <h1>Team</h1>
             </div>
             <div class="col-md-6">
-                <input class="search" type="text" placeholder="Search" ng-model="query" value="">
+                <span class="input search ubuntu">
+                    <input class="input__field input__field" type="text" id="search" ng-model="query" value="" autocomplete="off">
+                    <label class="input__label input__label" for="search">
+                        <span class="input__label-content input__label-content">Search</span>
+                    </label>
+                </span>
             </div>
         </div>
         <div class="row team">
