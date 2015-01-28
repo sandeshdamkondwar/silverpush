@@ -1240,7 +1240,8 @@ legend {
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-.navbar-nav>li:hover {
+.navbar-nav>li.open,
+.navbar-nav>li:not(.open):hover {
     padding-bottom: 5px;
 }
 /*------------------------------------------------------------------------------*/
