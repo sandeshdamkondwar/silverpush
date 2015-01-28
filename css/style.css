@@ -279,7 +279,6 @@ h1.insetshadow {
 }
 h1.retroshadow {
     color: #2c2c2c;
-    letter-spacing: .05em;
     text-shadow: 3px 3px 0px #d5d5d5, 2px 3px 0px rgba(0, 0, 0, 0.2);
     padding-bottom: 1em;
 }
