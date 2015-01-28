@@ -1253,6 +1253,7 @@ legend {
 }
 .navbar-brand {
     padding: 5px;
+    height: 60px;
 }
 .navbar-nav>li {
     background-color: #212121;
