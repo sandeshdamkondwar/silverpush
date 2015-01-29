@@ -311,10 +311,6 @@ h1.retroshadow {
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-.info-box >div.clr {
-    background-color: rgba(58, 58, 58, 0.96);
-    color: white;
-}
 .info-box >div {
     background-color: #5DB0C6;
     color: #FFF;
@@ -323,6 +319,9 @@ h1.retroshadow {
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
+}
+.info-box >div.clr {
+    background-color: rgba(58, 58, 58, 0.96);
 }
 .info-box p:nth-child(1) {
     font-size: 6em;
@@ -1305,6 +1304,23 @@ legend {
     }
 }
 
+/* Small desktop/laptop or Big tablet */
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .navbar-nav>li:last-child {
+        padding-bottom: 1em;
+    }
+
+    .info-box >div:nth-child(4n+3),
+    .info-box:nth-child(even) >div:nth-child(4n+2) {
+        background-color: #5DB0C6;
+    }
+
+    .info-box >div:nth-child(4n+4),
+    .info-box:nth-child(even) >div:nth-child(4n+1) {
+        background-color: rgba(58, 58, 58, 0.96);
+    }
+}
 
 /* Landscape phone to portrait tablet */
 
@@ -1319,6 +1335,14 @@ legend {
 
     .navbar-nav>li:last-child {
         padding-bottom: 1em;
+    }
+
+
+    .info-box:nth-child(odd) >div {
+        background-color: rgba(58, 58, 58, 0.96);
+    }
+    .info-box:nth-child(odd) >div.clr {
+        background-color: #5DB0C6;
     }
 }
 /* Landscape phones and down */
