@@ -469,6 +469,8 @@ img.bg {
 /* Footer */
 .footer ul {
     margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
 }
 
 .copyright {
