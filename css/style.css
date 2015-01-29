@@ -486,7 +486,9 @@ img.bg {
 /*------------------------------------------------------------------------------*/
 /* Angular Animation Style */
 /*  ng-view Animation  */
-
+.view-slide-in {
+    min-height: calc(100% - 50px);
+}
 .view-slide-in.ng-enter {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
