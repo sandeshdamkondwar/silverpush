@@ -1269,7 +1269,7 @@ legend {
 }
 
 .navbar-inverse {
-    background-color: #212121;
+    background-color: #151515;
     border-color: #212121;
     background-image: none;
     background-repeat: no-repeat;
@@ -1280,7 +1280,7 @@ legend {
     height: 60px;
 }
 .navbar-nav>li {
-    background-color: #212121;
+    background-color: #151515;
     padding-top: 4px;
     border-bottom: 6px solid #5DB0C6;
     -webkit-transition: all 0.2s ease-out;
