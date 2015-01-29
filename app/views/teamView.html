@@ -44,8 +44,8 @@
             </div>
         </div>
         <div class="row team">
-            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" ng-repeat="person in team | filter: {category: 'team', name: query}| orderBy: empOrderBy">
-                <div class="panel panel-default team-panel wow fadeInUp animated"
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="person in team | filter: {category: 'team', name: query}| orderBy: empOrderBy">
+                <div class="panel panel-default team-panel wow fadeInUp animated box max-400"
                         style="{{ 'background-image: url(' + profileImagesPath + person.shortname + '.jpg);' }}">
                     <div class="panel-body team_box_img" id="{{ person.shortname }}">
                         <div class="hover-div">
