@@ -154,7 +154,7 @@ section.module.parallax.narrow {
 section.module.parallax h1 {
     color: rgba(255, 255, 255, 0.8);
     font-size: 48px;
-    font-family: "Ubuntu";
+    font-family: 'Titillium Web', sans-serif;
     line-height: 330px;
     font-weight: 400;
     text-align: center;
@@ -248,7 +248,7 @@ section.module.parallax-measurement {
 /* Title Styles */
 
 h1, .search {
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     padding: 20px 0 20px 0;
     text-rendering: optimizeLegibility;
     margin: 0;
@@ -1207,16 +1207,12 @@ nav ul > li {
     vertical-align: middle;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
     position: relative;
-    overflow: hidden;
     text-align: center;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 20px;
+    display: inline;
 }
 .panel-box .panel:before {
     content: "";
