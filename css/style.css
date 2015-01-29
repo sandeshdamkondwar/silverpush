@@ -20,6 +20,11 @@ body {
     padding-top: 50px;
 }
 
+.secondary-font {
+    font-family: 'Titillium Web', 'Economica', sans-serif;
+    font-weight: 400;
+}
+
 a:not([href]):hover,
 a:not([href]):focus {
     color: #337AB7;
