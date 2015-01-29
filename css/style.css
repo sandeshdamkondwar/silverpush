@@ -244,7 +244,9 @@ section.module.parallax-measurement {
 
     margin-top: -400px;
     /* your iframe height */
+    border-radius: 4px;
 }
+
 /* Title Styles */
 
 h1, .search {
@@ -357,7 +359,7 @@ h1.retroshadow {
     color: black;
 }
 .bg-black {
-    background-color: #5DB0C6;
+    background-color: #151515;
 }
 .bg-white {
     background-color: rgba(255, 255, 255, 0.55);
@@ -366,7 +368,7 @@ h1.retroshadow {
     color: black;
 }
 .bg-darkgrey {
-    background: #FAFAFA;
+    background: #FFFFFF;
     padding-top: 70px;
     padding-bottom: 70px;
     color: black;
@@ -400,6 +402,10 @@ h1.retroshadow {
     color: rgba(14, 121, 93, 0.90);
 }
 
+.career .page-title {
+    text-align: center;
+    margin-bottom: 1em;
+}
 .title-icon {
     color: rgb(0, 88, 161);
     font-size: 1.1em;
@@ -1197,6 +1203,11 @@ nav ul > li {
 }
 
 /* List Items */
+.list-group {
+    background: rgba(166, 137, 95, 0.1);
+
+}
+
 .list-group-item {
     font-size: 1.2em;
 }
@@ -1245,9 +1256,16 @@ nav ul > li {
 /*------------------------------------------------------------------------------*/
 /* Hacked Bootstrap Style */
 
+
 legend {
     font-size: 3em;
+    padding: 0 10px;
 }
+
+.investors legend {
+    text-align: center;
+}
+
 .navbar-inverse {
     background-color: #212121;
     border-color: #212121;
