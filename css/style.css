@@ -1309,16 +1309,16 @@ legend {
 /* Landscape phone to portrait tablet */
 
 @media (max-width: 767px) {
-    .box.max-400 {
-        margin: 0 auto;
-    }
-
     .navbar-nav {
         margin: 0 -15px;
     }
 
     .navbar-nav>li {
         border-bottom: 0;
+    }
+
+    .navbar-nav>li:last-child {
+        padding-bottom: 1em;
     }
 }
 /* Landscape phones and down */
