@@ -242,6 +242,12 @@ section.module.parallax-measurement {
 
 /* Map Overlay */
 
+#maps {
+    border: 10px solid #FFF;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
 .overlay {
     background: transparent;
     position: relative;
