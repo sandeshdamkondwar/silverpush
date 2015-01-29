@@ -1237,6 +1237,12 @@ nav ul > li {
     transition-timing-function: ease-out;
 }
 
+.bottom-border {
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 0.5em;
+    display: inline-block;
+}
+
 
 /*------------------------------------------------------------------------------*/
 /* Hacked Bootstrap Style */
